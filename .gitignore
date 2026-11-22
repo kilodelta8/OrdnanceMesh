@@ -13,3 +13,6 @@ bridge/config.ini
 # Logs & OS artifacts
 *.log
 .DS_Store
+
+atak/maps/*.mbtiles
+atak/certs/

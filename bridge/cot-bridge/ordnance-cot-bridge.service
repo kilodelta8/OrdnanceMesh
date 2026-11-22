@@ -1,0 +1,18 @@
+[Unit]
+Description=OrdnanceMesh MeshCore-to-ATAK CoT Bridge
+After=network.target ordnance-bridge.service
+Wants=ordnance-bridge.service
+
+[Service]
+Type=simple
+User=ordnance
+Group=systemd-journal
+Environment=OTS_COT_HOST=127.0.0.1
+Environment=OTS_COT_PORT=8088
+Environment=COT_STALE_MINUTES=15
+ExecStart=/usr/bin/python3 /opt/ordnance-bridge/ordnance_cot_bridge.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

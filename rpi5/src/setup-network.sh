@@ -28,4 +28,8 @@ nmcli con add type wifi ifname wlan0 con-name ordnance-ap autoconnect yes \
   wifi-sec.key-mgmt wpa-psk wifi-sec.psk "${AP_PASS}"
 nmcli con up ordnance-ap
 
+# Optional wired LAN port (USB-Ethernet adapter) for Airplane-Mode EUDs & IP MANET
+nmcli con add type ethernet ifname eth1 con-name ordnance-wired-lan autoconnect yes \
+  ipv4.method shared ipv4.addresses 10.88.1.1/24
+
 echo "Network configured: eth0 (Starlink WAN failover) + wlan0 AP (${AP_SSID} @ 10.88.0.1/24)."
