@@ -23,13 +23,13 @@ read -r -p "Install mumble-server now? [y/N]: " INSTALL_MUMBLE
 if [[ "${INSTALL_MUMBLE}" =~ ^[Yy]$ ]]; then
   apt-get update && apt-get install -y mumble-server
   systemctl enable --now mumble-server
-  echo "  -> Mumble server active on 10.88.0.1:64738"
+  echo "  -> Mumble server active on 10.88.0.1:64738 (set serverpassword in /etc/mumble-server.ini)"
 fi
 
 echo "[4/4] Optional: Run official OpenTAKServer Raspberry Pi installer?"
 read -r -p "Run OpenTAKServer installer now? (requires internet/Starlink) [y/N]: " INSTALL_OTS
 if [[ "${INSTALL_OTS}" =~ ^[Yy]$ ]]; then
-  curl -Ls https://i.opentakserver.io/raspberry_pi_installer | bash -
+  sudo -u "${SUDO_USER:-$USER}" bash -c 'curl -Ls https://i.opentakserver.io/raspberry_pi_installer | bash -'
 fi
 
 echo "Phase 3 setup complete. Test CoT injection with: bash bridge/cot-bridge/test-cot-bridge.sh"
