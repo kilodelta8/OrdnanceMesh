@@ -1,0 +1,16 @@
+name: ordnance_mesh
+description: OrdnanceMesh unified off-grid companion app for Android & iOS.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  geolocator: ^13.0.0
+
+flutter:
+  uses-material-design: true
