@@ -1,0 +1,15 @@
+# Python & virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local secrets & live configs (commit only *.example templates)
+bridge/config.ini
+*.key
+*.pem
+.env
+
+# Logs & OS artifacts
+*.log
+.DS_Store

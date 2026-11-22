@@ -1,0 +1,17 @@
+[Unit]
+Description=OrdnanceMesh Dual-Radio Bridge (AMMB Async)
+After=network.target dev-ordnance\x2dmeshtastic.device dev-ordnance\x2dmeshcore.device
+Wants=dev-ordnance\x2dmeshtastic.device dev-ordnance\x2dmeshcore.device
+
+[Service]
+Type=simple
+User=ordnance
+Group=dialout
+WorkingDirectory=/opt/ordnance-bridge
+Environment=AMMB_CONFIG=/etc/ordnancemesh/bridge.ini
+ExecStart=/opt/ordnance-bridge/.venv/bin/python run_bridge_async.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

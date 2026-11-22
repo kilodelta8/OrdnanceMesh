@@ -1,0 +1,18 @@
+[meshtastic]
+SERIAL_PORT = /dev/ordnance-meshtastic
+MESHTASTIC_CHANNEL_INDEX = 1
+
+[external]
+EXTERNAL_TRANSPORT = serial
+SERIAL_PORT = /dev/ordnance-meshcore
+SERIAL_PROTOCOL = companion_radio
+COMPANION_HANDSHAKE_ENABLED = True
+COMPANION_CONTACTS_POLL_S = 0
+COMPANION_DEBUG = False
+SERIAL_AUTO_SWITCH = True
+MESHCORE_CHANNEL_INDEX = 2
+
+[api]
+API_ENABLED = True
+API_HOST = 127.0.0.1
+API_PORT = 8080

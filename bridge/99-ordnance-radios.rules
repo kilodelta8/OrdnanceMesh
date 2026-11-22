@@ -1,0 +1,4 @@
+# Deterministic symlinks for OrdnanceMesh dual-radio bridge
+# Find serials with: udevadm info -a -n /dev/ttyUSB0 | grep -E "idVendor|idProduct|serial" | head -n 6
+SUBSYSTEM=="tty", ATTRS{serial}=="REPLACE_MESHTASTIC_SERIAL", SYMLINK+="ordnance-meshtastic", GROUP="dialout", MODE="0660"
+SUBSYSTEM=="tty", ATTRS{serial}=="REPLACE_MESHCORE_SERIAL",   SYMLINK+="ordnance-meshcore",   GROUP="dialout", MODE="0660"
