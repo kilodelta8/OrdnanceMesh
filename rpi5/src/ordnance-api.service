@@ -1,0 +1,21 @@
+[Unit]
+Description=OrdnanceMesh Mobile Relay Telemetry, Chat & Beacon API
+After=network.target ordnance-bridge.service
+Wants=ordnance-bridge.service
+
+[Service]
+Type=simple
+User=ordnance
+Group=ordnance
+SupplementaryGroups=video systemd-journal
+Environment=ORDNANCE_API_HOST=0.0.0.0
+Environment=ORDNANCE_API_PORT=8081
+Environment=OTS_COT_HOST=127.0.0.1
+Environment=OTS_COT_PORT=8088
+Environment=AMMB_SEND_URL=http://127.0.0.1:8080/api/send
+ExecStart=/usr/bin/python3 /opt/ordnance-bridge/ordnance_api.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

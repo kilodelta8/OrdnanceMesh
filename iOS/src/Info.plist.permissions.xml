@@ -1,0 +1,11 @@
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Used to send your GPS coordinates as an ATAK PLI or PIN beacon.</string>
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>Used to connect to personal Meshtastic and MeshCore BLE carry nodes.</string>
+<key>NSLocalNetworkUsageDescription</key>
+<string>Used to communicate with your local OrdnanceBox relay at 10.88.0.1.</string>
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsLocalNetworking</key>
+  <true/>
+</dict>
