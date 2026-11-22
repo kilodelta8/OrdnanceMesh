@@ -1,0 +1,6 @@
+[Unit]
+Description=OrdnanceMesh Bridge Health Watchdog
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/ordnance-watchdog.sh

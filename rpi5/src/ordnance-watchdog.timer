@@ -1,0 +1,10 @@
+[Unit]
+Description=Run OrdnanceMesh Bridge Watchdog every 60 seconds
+
+[Timer]
+OnBootSec=90s
+OnUnitActiveSec=60s
+Unit=ordnance-watchdog.service
+
+[Install]
+WantedBy=timers.target
