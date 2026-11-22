@@ -1,4 +1,4 @@
-# OrdnanceMesh & OrdnanceOS
+# OrdnanceMesh & [OrdnanceOS](https://github.com/kilodelta8/OrdnanceOS)
 
 **Unified off-grid tactical communications, Meshtastic–MeshCore bridging, ATAK integration, Starlink failover, and a custom Debian-based survival Linux distribution.**
 
