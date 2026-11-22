@@ -1,0 +1,6 @@
+[Unit]
+Description=OrdnanceMesh Thermal & System Telemetry Logger
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/ordnance-telemetry.sh

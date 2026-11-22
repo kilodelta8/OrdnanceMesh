@@ -1,0 +1,18 @@
+Subsystem,Item,Exact_Spec,Qty,Notes
+Power,LiFePO4 Battery,12.8V 30Ah LiFePO4 with Low-Temp Charge Cutoff BMS,1,Essential for winter solar charging safety
+Power,MPPT Solar Controller,Victron SmartSolar MPPT 75/15 (Bluetooth + VE.Direct),1,Set preset to LiFePO4 14.2V/13.5V
+Power,Folding Solar Panel,100W Monocrystalline Portable Folding (Anderson/MC4),1,Recharges 30Ah pack + runs core relay
+Power,RPi 5 Buck Converter,12V to 5V 5A (25W+) USB-C PD Step-Down Buck,1,Do not use 3A buck; prevents brownouts
+Power,Starlink Mini DC Boost,12V to 24V or 30V (72W-105W) Waterproof Boost,1,Wire through dedicated fused rocker switch
+Power,Fuse Block & Fuses,6-Way Marine ATO/ATC Fuse Block + Neg Bus (30A/15A/10A/5A),1,Main 30A + MPPT 15A + RPi 10A + Starlink 10A
+Power,Panel Switches & Solar Port,2x IP67 20A Rocker Switches + 1x IP67 Anderson Powerpole,1,MAIN PWR + STARLINK PWR + SOLAR IN
+Enclosure,Active Ammo Can,40mm (PA120) or Fat-50 (PA108) Steel Ammo Can,1,Paint light tan to reduce summer heat gain
+Enclosure,Cold-Spare Can,Standard .50 cal (M2A1) Steel Ammo Can + 1/4in EVA Foam,1,DO NOT DRILL ANY HOLES
+RF,N-Type Bulkheads & Pigtails,2x N-Type Female Bulkheads + 2x 12in RG316/LMR-195 Pigtails,2,Mount on opposite ends of can (10-12in apart)
+RF,External 915 MHz Antennas,2x 915 MHz N-Type Male Fiberglass/Whip (3-5.8 dBi),2,Label MESHTASTIC 906.875 and MESHCORE 910.525
+Thermal,Conduction & Venting,1/8in Aluminum Sub-Plate + 2mm Thermal Pads + 2x IP67 Gore Vents,1,Optional 12V fan + 40C KSD9700 switch
+EMP,Conductive RF Lid Gasket,Conductive Elastomer or BeCu EMI Gasket Tape (3/8-1/2in),2,Strip lid-lip paint to bare steel on BOTH cans
+EMP,Coax Surge Arrestors,N-Type M-to-F GDT Lightning Arrestor (0-3/6 GHz 50 Ohm),2,Bond ground lugs to common brass ground stud
+EMP,Ethernet Surge & Port,IP67 Shielded RJ45 Bulkhead + Shielded Cat6A Surge Protector,1,Bond ground lead to common brass ground stud
+EMP,DC Surge & Ferrites,18V-24V Bidirectional TVS Diodes + 6x Snap-On Type-31 Ferrites,1,Clamp on solar + Starlink + Ethernet + USB LoRa
+EMP,Common Ground Stud,1/4-20 Solid Brass Bolt + Star Washers + 1/2in Copper Braid,1,Connect to 2-4ft portable ground rod in field

@@ -1,0 +1,11 @@
+[Unit]
+Description=Check Starlink Mini WAN state every 5 seconds
+
+[Timer]
+OnBootSec=15s
+OnUnitActiveSec=5s
+AccuracySec=1s
+Unit=ordnance-wan-monitor.service
+
+[Install]
+WantedBy=timers.target

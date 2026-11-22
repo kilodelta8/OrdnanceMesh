@@ -1,0 +1,6 @@
+[Unit]
+Description=OrdnanceMesh Starlink Mini WAN State Monitor
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/ordnance-wan-monitor.sh
